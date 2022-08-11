@@ -1,0 +1,105 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* propiedades del padre */
+
+.padre{
+    height: 800px;
+    display: grid;
+    /*propiedad para trabajar columnas y propiedad para trabajar filas*/
+    
+    grid-template-columns: 2fr 1fr ;
+    grid-template-rows: 20% 80%;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+}
+/* propiedades de los hijos */
+
+.hijoUno{
+    background-color: blueviolet;
+}
+.hijoDos{
+    background-color: rgb(97, 11, 176);
+}
+.hijoTres{
+    background-color: rgb(80, 15, 141);
+}
+.hijoCuatro{
+    background-color: rgb(21, 3, 38);
+}
+
+/*ejemploDos*/
+
+.ejemplo{
+    height: 500px;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+    justify-items:center;
+    align-items: center;
+
+}
+
+/*propiedades de los hijos*/
+
+.imagen-1{
+    justify-self: end;
+    align-self: end;
+
+}
+
+
+
+/*ultimo ejemplo*/
+
+/*propiedades del padre*/
+
+.contenedor{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    grid-template-rows: 0,5fr 1fr 0,5fr ;
+
+    /* sirve para trabajar las areas de mi html*/
+
+    grid-template-areas: 
+       "header header header"
+       "main main section"
+       "footer footer footer"
+    ;
+
+}
+
+
+/*propiedades de los hijos*/
+
+header{
+    
+    background-color: rgb(162, 57, 57);
+    grid-area: header;
+    display: flex;
+}
+
+main{
+    background-color: rgb(151, 9, 9);
+    grid-area: main;
+}
+
+section{
+    background-color: rgb(107, 10, 10);
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    background-color: rgb(48, 2, 2);
+    grid-area: footer;
+}
